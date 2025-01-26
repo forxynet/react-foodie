@@ -48,7 +48,7 @@ const Hero = () => {
             >
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold">
                 Welcome{" "}
-                <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">
+                <span className="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">
                   Foodie
                 </span>{" "}
                 Zone
@@ -77,7 +77,7 @@ const Hero = () => {
               </div>
               <div className="flex lg:flex-col lg:top-1/2 lg:-translate-y-1/2 lg:py-2 justify-center gap-4 absolute bottom-[0px] lg:-right-10 bg-white/30 rounded-full">
                 {ImageList.map((item) => (
-                  <img
+                  <img key={item.id}
                     data-aos="zoom-in"
                     data-aos-duration="400"
                     data-aos-once="true"
@@ -87,8 +87,8 @@ const Hero = () => {
                         item.id === 1
                           ? BiryaniImg1
                           : item.id === 2
-                          ? BiryaniImg2
-                          : BiryaniImg3
+                            ? BiryaniImg2
+                            : BiryaniImg3
                       );
                     }}
                     alt="biryani img"

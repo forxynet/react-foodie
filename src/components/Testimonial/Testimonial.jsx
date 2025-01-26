@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 
 const testimonialData = [
@@ -58,7 +57,7 @@ const Testimonial = () => {
             <Slider {...settings}>
               {testimonialData.map((data) => {
                 return (
-                  <div className="my-6">
+                  <div key={data.id} className="my-6">
                     <div
                       key={data.id}
                       className="flex flex-col justify-center items-center gap-4 text-center   shadow-lg p-4 mx-4 rounded-xl dark:bg-gray-800 bg-primary/10 relative"
